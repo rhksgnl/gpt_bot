@@ -1,0 +1,32 @@
+{
+  "python.autoComplete.extraPaths": [
+    "/home/hwi/robot_ws/install/yolov5_ros/lib/python3.10/site-packages",
+    "/home/hwi/robot_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages",
+    "/home/hwi/robot_ws/install/objdetect/lib/python3.10/site-packages",
+    "/home/hwi/robot_ws/build/obj_node",
+    "/home/hwi/robot_ws/install/obj_node/lib/python3.10/site-packages",
+    "/home/hwi/robot_ws/build/gpt_node",
+    "/home/hwi/robot_ws/install/gpt_node/lib/python3.10/site-packages",
+    "/home/hwi/robot_ws/install/interfaces/local/lib/python3.10/dist-packages",
+    "/home/hwi/robot_ws/build/central_node",
+    "/home/hwi/robot_ws/install/central_node/lib/python3.10/site-packages",
+    "/home/hwi/robot_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages",
+    "/opt/ros/humble/lib/python3.10/site-packages",
+    "/opt/ros/humble/local/lib/python3.10/dist-packages"
+  ],
+  "python.analysis.extraPaths": [
+    "/home/hwi/robot_ws/install/yolov5_ros/lib/python3.10/site-packages",
+    "/home/hwi/robot_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages",
+    "/home/hwi/robot_ws/install/objdetect/lib/python3.10/site-packages",
+    "/home/hwi/robot_ws/build/obj_node",
+    "/home/hwi/robot_ws/install/obj_node/lib/python3.10/site-packages",
+    "/home/hwi/robot_ws/build/gpt_node",
+    "/home/hwi/robot_ws/install/gpt_node/lib/python3.10/site-packages",
+    "/home/hwi/robot_ws/install/interfaces/local/lib/python3.10/dist-packages",
+    "/home/hwi/robot_ws/build/central_node",
+    "/home/hwi/robot_ws/install/central_node/lib/python3.10/site-packages",
+    "/home/hwi/robot_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages",
+    "/opt/ros/humble/lib/python3.10/site-packages",
+    "/opt/ros/humble/local/lib/python3.10/dist-packages"
+  ]
+}

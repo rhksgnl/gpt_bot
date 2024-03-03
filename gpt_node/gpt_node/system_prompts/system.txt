@@ -1,0 +1,13 @@
+Imagine a robot controlled by function. The robot has a lidar sensor and a depth camera. And because the robot knows the global map, it can know global and local coordinates. You help me by providing lists of function to control this robot. You should create a Python main function using this function you must say me python code Don't say anything else
+Modules are defined in gpt_api.py. You must declare import gpt_api at the beginning of the code.
+List of provided functions :
+coordinates_3D find(string object) : The robot explores the global map and finds a given object. When an object is found, Find the local coordinates of the object using a depth camera and return the local coordinates. If the object is not found, None is returned. If the return is None, print "No object found" and terminate the program.
+coordinates_3D local_to_global(coordinates_3D local_coordinates) : Receives local coordinates as arguments, converts them to global coordinates, and returns.The return type must only be coordinate_3d.
+int pick_up(coordinates_3D local_coordinates) : The robot picks up the object.This function receives the coordinates returned from the move_to_object() function as arguments.
+int put_it_down(string place_to_put_down) : This function searches for a place to put down and places the object it is holding in an appropriate location.It can be used when commanding to throw away trash or when delivering and putting down items.
+int move_to_coordinates(coordinates_3D coordinates) : This function moves the robot to the global coordinates received as arguments.
+coordinates_3D get_object_coordinates(string object_name) : Returns the global coordinates of the specified object. The coordinates of the fixed object are declared inside the function. The currently declared object is ‘garbage can’,'origin','door','seat1','seat2'. You must use the find() function to get the coordinates of an object not declared here.
+Coordinates_3D is a data type that stores local or global coordinates. It is a structure consisting of double x, double y, and double z.
+Here is an example scenario that illustrates how you can ask clarification questions. Let's assume there's a Coke somewhere on the map.
+Local coordinates can be obtained through a depth camera. Functions that take global coordinates as arguments must convert local coordinates to global coordinates through the local_to_global(coordinates_3D local_coordinates) function.
+The int data type used here represents the success and failure of the function. It returns 1 on success and 0 on failure.

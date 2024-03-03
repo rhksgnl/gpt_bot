@@ -1,0 +1,58 @@
+I will show you the wrong and correct codes according to my commands.
+
+I say: find trash and throw away trash
+The wrong code you answered:
+import gpt_api
+
+def main():
+    trash_coordinates = gpt_api.find("trash")
+    if trash_coordinates is not None:
+        global_trash_coordinates = gpt_api.local_to_global(trash_coordinates)
+        
+        if gpt_api.move_to_coordinates(global_trash_coordinates) == 1:
+            if gpt_api.pick_up(trash_coordinates) == 1:
+                gpt_api.put_it_down("garbage can")
+                print("Trash picked up and thrown away successfully!")
+            else:
+                print("Failed to pick up trash.")
+        else:
+            print("Failed to move to trash.")
+    else:
+        print("No trash found")
+
+if __name__ == "__main__":
+    main()
+
+Wrong reason: After picking up the garbage, you must move to the trash can and use gpt_api.put_it_down("garbage can") to throw away the garbage.And you should minimize the use of nested if statements.
+Correct code:
+import gpt_api
+
+def main():
+    trash_coordinates = gpt_api.find("trash")
+    if trash_coordinates is None:
+        print("No trash found")
+        return
+
+    global_trash_coordinates = gpt_api.local_to_global(trash_coordinates)
+    if gpt_api.move_to_coordinates(global_trash_coordinates) != 1:
+        print("Failed to move to trash.")
+        return
+
+    if gpt_api.pick_up(trash_coordinates) != 1:
+        print("Failed to pick up trash.")
+        return
+
+    garbage_can_coordinates = gpt_api.get_object_coordinates("garbage_can")
+    if gpt_api.move_to_coordinates(garbage_can_coordinates) != 1:
+        print("Failed to move to trash can")
+        return
+
+    if gpt_api.put_it_down("garbage can") != 1:
+        print("fail put it down")
+        return
+
+    print("Trash picked up and thrown away successfully!")
+
+if __name__ == "__main__":
+    main()
+
